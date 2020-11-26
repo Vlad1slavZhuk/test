@@ -26,6 +26,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check-out code
         uses: actions/checkout@v2
+      
+      - name: Go mod vendor
+        run: go mod vendor
 
       # Runs a single command using the runners shell
       - name: start HTTP
