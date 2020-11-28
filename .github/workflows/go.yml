@@ -24,3 +24,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: "Start Golangci-lint."
       uses: actions-contrib/golangci-lint@v1
+      with:
+        workdir: subdirectory/
