@@ -32,4 +32,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Start HTTP
-        run: go run main.go
+        run: | 
+          go run main.go && 
+          curl http://127.0.0.1:8000/
