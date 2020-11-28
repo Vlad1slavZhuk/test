@@ -11,18 +11,10 @@ jobs:
   build:
     name: Golangci-Lint
     runs-on: ubuntu-latest
-    steps:
-
-    - name: "Set up Go 1.15.5"
-      uses: actions/setup-go@v2
-      with:
-        go-version: '1.15.5'
-
-    - name: "Check out code into the Go module directory"
-      uses: actions/checkout@v2
-    
+    steps:    
     - uses: actions/checkout@v2
     - name: "Start Golangci-lint."
-      uses: actions-contrib/golangci-lint@v1
+      uses: actions-contrib/golangci-lint-action@v2
       with:
-        workdir: subdirectory/
+        version: v1.29
+      
