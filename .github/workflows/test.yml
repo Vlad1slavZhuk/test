@@ -22,17 +22,18 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.15.x 
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+          go-version: '1.15.5' 
+      
+      - uses: actions/checkout@v2
       - name: Check-out code
-        uses: actions/checkout@v2
+        run: ls -a
       
       - name: Go mod vendor
         run: go mod vendor
 
       # Runs a single command using the runners shell
-      - name: start HTTP
-        run: go run main.go
+      - name: Version Go
+        run: go version
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
